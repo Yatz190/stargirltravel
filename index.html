@@ -1,0 +1,500 @@
+A<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTGIRLSTRVEL</title>
+    <style>
+        body{
+            background: #cccafd;
+        }
+        /* Estilos para la lista no ordenada (ul) que contiene el menú */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Estilos para los elementos de la lista (li) */
+        li {
+            float: left;
+        }
+
+        /* Estilos para los enlaces (a) en el menú */
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Cambiar el color de fondo de los enlaces al pasar el ratón por encima */
+        li a:hover {
+            background-color: #444;
+        }
+
+        /* Estilos para el menú desplegable */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* Estilos para los elementos del menú desplegable */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left; 
+            p.mas-grande {font-size: x-large;}  
+        }
+
+        /* Cambiar el color de fondo de los elementos del menú al pasar el ratón por encima */
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Mostrar el menú desplegable al pasar el ratón por encima del elemento padre */
+        li:hover .dropdown {
+            display: block;
+        }
+        h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+#main-header {
+	background: #333;
+	color: white;
+	height: 80px;
+}	
+	#main-header a {
+		color: white;
+	}
+
+.registro{
+	position: absolute;
+	width: 540px;
+	top: 250px;
+	left: 700px;
+}
+
+/*
+ * Logo
+ */
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+	#logo-header:hover {
+		color: #0b76a6;
+	}
+	
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+	}
+
+
+	.contenedor{
+		color: white;
+		width: 500px;
+		background:  #818efe;
+		padding: 40px 20px;
+		box-sizing: border-box;
+		left: 10px;
+		top: 20px;
+		position: relative;
+		
+	}
+	input{
+		width: 100%;
+		background:  #dbdfff ;
+		border: 1px solid   ;
+		border-radius: 3px;
+		padding: 3px 10px;
+		box-sizing: border-box;
+	
+	}
+	input[type="submit"]{
+		width: 100%;
+		background:  #FFFFFF ;
+		border-radius: 3px;
+		padding: 3px 10px;
+		box-sizing: border-box;
+		border: none;
+		cursor: pointer;
+		color: #140000;
+		font-size: 20px;
+	
+	}
+	input[type= "submit"]:hover{
+		color: white;
+		background: #EAAF1D;
+		transition: .6s;
+	
+	}
+
+/*
+ * Navegación
+ */
+nav {
+	float: right;
+}
+nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+nav ul li {
+			display: inline-block;
+			line-height: 80px;
+		}
+			
+nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+			}
+			
+nav ul li a:hover {
+					background: #0b76a6;
+				}
+#main-content {
+                    background: white;
+                    width: 90%;
+                    max-width: 1200px;
+                    margin: 20px auto;
+                    box-shadow: 0 0 10px rgba(0,0,0,.1);
+                }
+                
+#main-content header,
+#main-content .content {
+	padding: 40px;
+}
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+	#main-footer p {
+		margin: 0;
+	}
+	
+	#main-footer a {
+		color: white;
+	}
+    div.gallery {
+  margin: 5px;
+  border: 1px solid #ffffff;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #ffffff;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+/* Estilo para el contenedor del menú */
+.menu-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Estilo para el botón del menú */
+        .menu-button {
+            background-color: #db9df3;
+            color: #0e0d0d;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .menu-horizontal{
+          list-style: none;
+          display: flex;
+           justify-content: space-around;
+        }
+       .menu-horizontal >li> a{
+        display: block;
+       padding: 15px 20px;
+       color: black;
+       text-decoration: none;
+       }
+       .menu-horizontal >li:hover{
+        background-color: #caa2b4;
+       }
+
+    
+
+        /* Estilo para el menú desplegable */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #db9df3;
+            min-width: 150px;
+            z-index: 1;
+        }
+
+        /* Estilo para los elementos del menú */
+        .dropdown-menu a {
+            color: #020202;
+            padding: 15px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Cambiar el color de fondo de los elementos del menú al pasar el ratón por encima */
+        .dropdown-menu a:hover {
+            background-color: #5cf3b9;
+        }
+
+        /* Mostrar el menú desplegable al hacer clic en el botón */
+        .menu-container:hover .dropdown-menu {
+            display: block;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <p>
+
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li class="dropdown">
+            <a href="#">Productos</a>
+            <div class="dropdown-content">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            
+            </div>
+
+            
+       
+</li>
+        <li><a href="#">Acerca de</a></li>
+        
+        
+        <li><a href="#">Paquetes</a></li>
+        <li><a href="#">Descuentos</a></li>
+        <li><a href="#">Reservaciones</a></li>
+        <li><a href="#">Registro</a></li>
+        <div class="menu-container">
+          <button class="menu-button">Registra tu proximo viaje </button>
+          <div class="dropdown-menu">
+              <a href="#">Fechas </a>
+              <a href="#">Transporte</a>
+              <a href="#">Consulta</a>
+          </div>
+      
+      
+      </div>
+
+
+
+    </ul>
+<b></b>
+<b></b>
+<b></b>
+<b></b>
+<b></b>
+<div class="menu-container">
+    <button class="menu-button">Registra tu proximo viaje </button>
+    <div class="dropdown-menu">
+        <a href="#">Fechas </a>
+        <a href="#">Transporte</a>
+        <a href="#">Consulta</a>
+    </div>
+
+
+</div>
+</body>
+</nav>
+    <h1></h1>
+    <center><img src="https://a.cdn-hotels.com/gdcs/production197/d1656/35d4241a-e7f3-4848-82c9-4b4529b245bf.jpg"  alt="center" width="1300" height="400"></center>
+
+    <br></br>
+
+   <center> <div class="gallery">
+       <center> <a target="_blank" href="https://i0.wp.com/blog.vivaaerobus.com/wp-content/uploads/2020/03/Lugares-para-visitar-en-CDMX.jpg?fit=700%2C393&ssl=1">
+          <img src="https://i0.wp.com/blog.vivaaerobus.com/wp-content/uploads/2020/03/Lugares-para-visitar-en-CDMX.jpg?fit=700%2C393&ssl=1" alt="CDMX" width="600" height="400">
+        </a>
+        <div class="desc">Ciudad de Mexico</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="https://volemos.nyc3.cdn.digitaloceanspaces.com/blog/wp-content/uploads/2022/05/11124754/donde-alojarse-cancun.jpg">
+          <img src="https://volemos.nyc3.cdn.digitaloceanspaces.com/blog/wp-content/uploads/2022/05/11124754/donde-alojarse-cancun.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Cancun</div>
+      </div>
+      
+      <div  style="text-align: center;" class="gallery">
+        <a target="_blank" href="https://media.admagazine.com/photos/618a6737a9f7fab6f0622ef6/4:3/w_2828,h_2121,c_limit/66143.jpg">
+          <img src="https://media.admagazine.com/photos/618a6737a9f7fab6f0622ef6/4:3/w_2828,h_2121,c_limit/66143.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Oaxaca</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="https://i0.wp.com/blog.vivaaerobus.com/wp-content/uploads/2019/09/MALECON-MAZATLAN-.jpg?fit=960%2C540&ssl=1">
+          <img src="https://i0.wp.com/blog.vivaaerobus.com/wp-content/uploads/2019/09/MALECON-MAZATLAN-.jpg?fit=960%2C540&ssl=1" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Mazatlan</div></center>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://queretaro.travel/wp-content/uploads/2021/12/los-arcos-de-queretaro-LHUZ3EG.jpg">
+          <img src="https://queretaro.travel/wp-content/uploads/2021/12/los-arcos-de-queretaro-LHUZ3EG.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Queretaro</div></center>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://imagenes.descubro.mx/uploads/2019/10/ColoradasWeHeartIt.jpg">
+          <img src="https://imagenes.descubro.mx/uploads/2019/10/ColoradasWeHeartIt.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Yucatan</div></center>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://a.cdn-hotels.com/gdcs/production31/d1765/f21230dc-ba0d-414c-9b10-0a4427f07899.jpg?impolicy=fcrop&w=1600&h=1066&q=medium">
+          <img src="https://a.cdn-hotels.com/gdcs/production31/d1765/f21230dc-ba0d-414c-9b10-0a4427f07899.jpg?impolicy=fcrop&w=1600&h=1066&q=medium" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Puebla</div></center>
+      </div>
+    </center>
+           
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
+
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <center><img src="https://i0.wp.com/blog.vivaaerobus.com/wp-content/uploads/2020/03/Lugares-para-visitar-en-CDMX.jpg?fit=700%2C393&ssl=1" align="right" width="700" height="500" class="d-block w-200"></center>
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Lugares de la Republica Mexicana </h2>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            
+        <center><img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/XNPDWXYMHNDTJK2QFZPQFE573M.jpg" align="left" width="700" height="500" class="d-block w-100"></center>
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Pueblos Magicos</h2>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            
+            <center><img src="https://mexicorutamagica.mx/wp-content/uploads/2021/08/lugares-historicos-de-mexico-1024x640.jpg" align="right" width="700" height="500" class="d-block w-200"></center>
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Lugares Culturales</h2>
+            </div>
+          </div>
+          
+        <div class="carousel-item">
+          
+          <center><img src="https://mexicorutamagica.mx/wp-content/uploads/2020/12/Aztlan-sustituye-a-la-fera-de-Chapultepec.jpg" align="left" width="700" height="500"  class="d-block w-200"></center>
+          <div class="carousel-caption d-none d-md-block">
+              <h2>Parques de Diversiones </h2>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          
+            <center><img src="https://blog.aquaventuras.com.mx/wp-content/uploads/2022/03/parques-acuaticos-en-Puerto-Vallarta.jpg" align="right" width="700" height="500" class="d-block w-200"></center>
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Parques Acuaticos </h2>
+            </div>
+          </div>
+
+              <div class="carousel-item">
+                
+          <center><img src="https://www.westernunion.com/blog/wp-content/uploads/2023/01/6-lugares-para-visitar-en-Mexico.jpg" align="left" width="700" height="500" class="d-block w-200"></center>
+          <div class="carousel-caption d-none d-md-block">
+              <h2>Otros</h2>
+          </div>
+        </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </center>
+</nav>
+            </article> <!-- /article -->
+        
+        </section> <!-- / #main-content -->
+
+        
+    </body>
+</html>
